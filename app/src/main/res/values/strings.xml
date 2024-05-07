@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Super Formulario Binding</string>
+    <string name="ingrese_datos">Ingrese Datos</string>
+    <string name="ingrese_nombre">Ingrese Nombre</string>
+    <string name="ingrese_correo">Ingrese Correo</string>
+    <string name="ingrese_edad">Ingrese Edad</string>
+    <string name="guardar_datos">Guardar Datos</string>
+    <array name="peliculas">
+        <item>Ghost</item>
+        <item>El silencio de los inocentes</item>
+    </array>
+</resources>
