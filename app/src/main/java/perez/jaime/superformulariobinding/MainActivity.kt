@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.irLista.setOnClickListener {
-            val intent = Intent(this, ListaActividad::class.java)
+            val intent = Intent(this, RecyclerActivity::class.java)
             startActivity(intent)
         }
 
