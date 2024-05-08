@@ -1,5 +1,6 @@
 package perez.jaime.superformulariobinding.adapter
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -24,16 +25,28 @@ class PeliculasAdapter(private val listaPeliculas: Array<String>)
         }
     }
 
+    //Enlaza el archivo xml con la clase ViewHolder que generamos arriba
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
+        // Creando una nueva vista, que define la celda que vamos a pintar la informacion
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_fila, parent, false)
+
+        return ViewHolder(view)
     }
 
+    //Esta funcion tiene que devolver la cantidad de items que va a mostrar el Recycler
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return listaPeliculas.size
     }
 
+    //Aca vamos a configurar la informacion en cada celda que vamos a mostrar en la lista
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        // Obtiene el elemento desde ls lista con su posicion y pinta esta informacion
+        // en los diferentes views que tenga la vista
+        //Aca estamos mostrando el titulo de la pelicula
+        holder.tituloPelicula.text = listaPeliculas[position]
+        //Vamos a agregar un texto en el subtitulo
+        holder.subtituloPelicula.text = "Estoy en la posición $position"
     }
 
 }
